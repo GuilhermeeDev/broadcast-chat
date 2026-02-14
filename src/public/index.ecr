@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal Chat</title>
+  <style>
+    body { font-family: Arial; background:#111; color:#fff; }
+    #chat { height:300px; overflow-y:scroll; border:1px solid #444; padding:10px; }
+    input { width:80%; padding:8px; }
+    button { padding:8px; }
+  </style>
+</head>
+<body>
+
+<h2>Crystal WebSocket Chat</h2>
+
+<div id="chat"></div>
+
+<input id="message" placeholder="Digite sua mensagem..."/>
+<button onclick="sendMessage()">Enviar</button>
+
+<script>
+  const chat = document.getElementById("chat");
+  const ws = new WebSocket("ws://localhost:9090/chat");
+
+  ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    const msg = document.createElement("div");
+    msg.innerText = `[${data.username}] ${data.message}`;
+    chat.appendChild(msg);
+    chat.scrollTop = chat.scrollHeight;
+  };
+
+  function sendMessage() {
+    const input = document.getElementById("message");
+    ws.send(input.value);
+    input.value = "";
+  }
+</script>
+
+</body>
+</html>
