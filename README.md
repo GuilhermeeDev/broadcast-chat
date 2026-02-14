@@ -1,6 +1,6 @@
 # Broadcast Chat
 
-Um servidor de chat simples desenvolvido em **Crystal**, utilizando sockets TCP para comunicação em tempo real entre múltiplos clientes.
+Um servidor de chat simples desenvolvido em **Crystal** com o framework `kemal`, utilizando sockets TCP para comunicação em tempo real entre múltiplos clientes.
 
 ### Como rodar
 Instale as dependências.
