@@ -5,14 +5,16 @@ authors:
   - GuilhermeeDev
 
 description: |
-  Short description of broadcast-chat
+  Um Broadcast chat simples que roda na porta 9090
 
 dependencies:
   pg:
     github: will/crystal-pg
     version: "~> 0.5"
+    
   kemal:
     github: kemalcr/kemal
+    version: "~> 1.10.0"
       
 development_dependencies:
   webmock:
