@@ -1,12 +1,12 @@
-FROM crystallang/crystal:1.20.0-dev
+FROM crystallang/crystal:1.19-alpine
 
 WORKDIR /src
 
-COPY shard.yml shard.lock /src/
-RUN shards install
-
 COPY . .
 
-RUN crystal build app/chat.cr --release
+RUN shards install
+RUN crystal build src/chat.cr --release --static --no-debug -o ./chat
+
+EXPOSE 9090
 
 CMD ["./chat"]
