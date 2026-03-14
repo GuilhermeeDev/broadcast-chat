@@ -1,6 +1,6 @@
 # Broadcast Chat
 
-Um servidor de chat simples desenvolvido em **Crystal** com o framework `kemal`, utilizando sockets TCP para comunicação em tempo real entre múltiplos clientes.
+Um servidor de chat simples desenvolvido em `Crystal` com o framework `kemal`, utilizando sockets TCP para comunicação em tempo real entre múltiplos clientes.
 
 ### Como rodar
 Instale as dependências.
@@ -15,7 +15,7 @@ crystal run src/chat.cr
 
 ### Rodando o projeto com asdf
 
-Caso o projeto for rodado usando ASDF, utilize o script abaixo para corrigir dependências de instalação do `crystal`.
+Caso o projeto for rodado usando ASDF, utilize o script abaixo para corrigir dependências de instalação do `Crystal`.
 ```
 ./setup-asdf.sh
 ```
