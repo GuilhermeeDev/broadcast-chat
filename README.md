@@ -13,7 +13,7 @@ rode o projeto
 crystal run src/chat.cr
 ```
 
-- Rodando o projeto com asdf
+### Rodando o projeto com asdf
 
 Caso o projeto for rodado usando ASDF, utilize o script abaixo para corrigir dependências de instalação do `crystal`.
 ```
